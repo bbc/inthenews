@@ -1,0 +1,23 @@
+= In The News
+
+A simple ruby parser for Wikipedia's "In the News" box on the
+(english-language) homepage.
+
+== Usage
+
+Install the gem
+
+   gem install inthenews
+
+Then fetch the current news items
+
+   @news = InTheNews::Parser.new
+   items = @news.items
+
+Items have text
+
+   items.first.text #=> "The Supreme Court of Pakistan retroactively discharges Yousaf Raza Gillani from the prime ministership due to his contempt of court conviction."
+
+And associated topics (other related wikipedia pages)
+
+   items.first.topics #=> ['Supreme_Court_of_Pakistan', 'Yousaf_Raza_Gillani', 'Prime_Minister_of_Pakistan', 'Contempt_of_court']
