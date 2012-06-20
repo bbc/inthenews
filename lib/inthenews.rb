@@ -1,6 +1,5 @@
 require 'rest_client'
 require 'nokogiri'
-require 'pry'
 
 module InTheNews
   class Item
