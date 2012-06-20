@@ -8,10 +8,8 @@ Gem::Specification.new do |s|
   s.authors = ["Chris Lowis"]
   s.date = "2012-06-20"
   s.email = "chris.lowis@gmail.com"
-  s.extra_rdoc_files = ["README"]
-  s.files = ["Gemfile", "Gemfile.lock", "test/fixtures", "test/fixtures/main_page_20120620.html", "test/inthenews_test.rb", "lib/inthenews.rb", "README"]
+  s.files = ["Gemfile", "README.rdoc", "test/fixtures", "test/fixtures/main_page_20120620.html", "test/inthenews_test.rb", "lib/inthenews.rb"]
   s.homepage = "http://github.com/bbcrd/inthenews"
-  s.rdoc_options = ["--main", "README"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.24"
   s.summary = "A little parser for Wikipedia's 'In the News' content"
