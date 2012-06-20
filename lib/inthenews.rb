@@ -5,6 +5,15 @@ module InTheNews
   class Item
     def initialize(element)
       @element = element
+      remove_noprint_elements!
+    end
+
+    # Remove any child nodes with class "nopront". This removes the
+    # boilerplate Wikinews, Obituries etc.
+    def remove_noprint_elements!
+      @element.xpath('//*[starts-with(@class,"noprint")]').each do |node|
+        node.children.remove
+      end
     end
 
     def text
