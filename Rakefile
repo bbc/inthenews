@@ -20,7 +20,7 @@ spec = Gem::Specification.new do |s|
 
   # Change these as appropriate
   s.name              = "inthenews"
-  s.version           = "0.1.1"
+  s.version           = "0.1.2"
   s.summary           = "A little parser for Wikipedia's 'In the News' content"
   s.author            = "Chris Lowis"
   s.email             = "chris.lowis@gmail.com"
