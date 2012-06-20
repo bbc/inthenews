@@ -20,6 +20,10 @@ module InTheNews
       @element.inner_text
     end
 
+    def html
+      @element.inner_html
+    end
+
     # Rescursively search for all a elements in this element and
     # return their value (removing /wiki/)
     def topics

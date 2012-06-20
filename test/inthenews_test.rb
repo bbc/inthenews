@@ -25,6 +25,10 @@ class TestInTheNews < MiniTest::Unit::TestCase
     assert_equal "The Supreme Court of Pakistan retroactively discharges Yousaf Raza Gillani from the prime ministership due to his contempt of court conviction.", @news.items[0].text
   end
 
+  def test_returns_html_of_news_headline
+    assert_equal "The <a href=\"/wiki/Supreme_Court_of_Pakistan\" title=\"Supreme Court of Pakistan\">Supreme Court of Pakistan</a> retroactively discharges <b><a href=\"/wiki/Yousaf_Raza_Gillani\" title=\"Yousaf Raza Gillani\">Yousaf Raza Gillani</a></b> from the <a href=\"/wiki/Prime_Minister_of_Pakistan\" title=\"Prime Minister of Pakistan\">prime ministership</a> due to his <a href=\"/wiki/Contempt_of_court\" title=\"Contempt of court\">contempt of court</a> conviction.", @news.items[0].html
+  end
+
   def test_strips_boiler_plate_from_last_item
     text = @news.items.last.text
     refute text.include?("Wikinews"), "Did not expect '#{text}' to include 'Wikinews'"
